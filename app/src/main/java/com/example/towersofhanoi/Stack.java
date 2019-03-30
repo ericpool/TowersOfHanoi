@@ -36,8 +36,15 @@ public class Stack
 
     public int peek()
     {
-        //we are assuming we will not call peek on the empty list
-        return this.top.getPayload();
+        if(this.count > 0)
+        {
+            return this.top.getPayload();
+        }
+        else
+        {
+            return -1;
+        }
+
     }
 
     public void display()
